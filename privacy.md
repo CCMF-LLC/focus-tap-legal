@@ -3,7 +3,7 @@
 **Public brand:** Onnique Studios
 **Operator:** Onnique Studios, operated by a sole proprietor in Jamaica
 **Contact:** aethrion.collective@outlook.com
-**Effective date:** [September 26, 2026
+**Effective date:** September 26, 2026
 
 ## 1. Scope
 
