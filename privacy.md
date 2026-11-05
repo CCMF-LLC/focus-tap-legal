@@ -1,122 +1,125 @@
 # Focus Tap Privacy Policy
 
-**Public brand:** Onnique Studios
-**Operator:** Onnique Studios, operated by a sole proprietor in Jamaica
-**Contact:** aethrion.collective@outlook.com
-**Effective date:** September 26, 2026
+**Public developer/publisher brand:** CCMF Interactive  
+**Privacy and customer-support contact:** [ccmfllc1926@gmail.com](mailto:ccmfllc1926@gmail.com)  
+**Effective date:** November 4, 2026
 
 ## 1. Scope
 
 This Privacy Policy describes the Focus Tap Android game and the data
-practices enabled in its current V1 configuration. Focus Tap does not require
-a player account and is not specifically directed to children. The approved
-audience is general audience.
+practices enabled in the published Billing-only version. Focus Tap does not
+require a player account and is not specifically directed to children. The
+approved audience is general audience.
 
 ## 2. Information Focus Tap stores on the device
 
-Focus Tap creates a local save file on the device. Depending on how the player
-uses the app, it can contain:
-
-- a locally generated anonymous player identifier and player-selected display
-  name;
-- scores, run summaries, accuracy/combo records, Campaign and Daily progress,
-  stars, achievements, mastery/progression, Collection state, and earned local
-  rewards;
-- settings such as music, sound, haptics, reduced motion, and other local
-  preferences; and
-- the analytics-consent choice and local Full Game entitlement metadata.
-
-This local save supports gameplay, progression, profile presentation, local
-leaderboard-style views, accessibility preferences, and entitlement state. It
-is not an online account and is not a Focus Tap cloud profile.
+Focus Tap stores a local save file in app-private device storage. Depending on
+how the player uses the app, it can contain a locally generated anonymous
+player identifier and player-selected display name; scores, run summaries,
+accuracy and combo records, Campaign and Daily progress, stars, achievements,
+mastery and progression, Collection state, earned local rewards; settings and
+local preferences; an analytics-consent choice; and local Full Game entitlement
+metadata. This save supports gameplay, progression, profile presentation,
+local leaderboard-style views, preferences, and entitlement state. It is not an
+online account or a Focus Tap cloud profile. Focus Tap does not send this local
+save or its gameplay/profile fields to a Focus Tap server.
 
 ## 3. What Focus Tap transmits
 
-In the current V1 configuration, Focus Tap does not transmit the local player
-ID, display name, gameplay/progression data, Collection data, settings,
-consent state, or local entitlement metadata to Focus Tap servers.
+The published Billing-only version can communicate with Google Play through
+Google Play Billing. The Billing Library connects and checks the product
+catalog and existing purchase ownership automatically after the app starts and
+after a Billing service reconnection, when the service and network are
+available. These checks can happen without the player opening the purchase
+screen or starting a new purchase. Focus Tap does not transmit its local player
+identifier, display name, gameplay/progression data, Collection data, settings,
+consent choice, or local entitlement metadata to a Focus Tap server.
 
-Android, Google Play, and other platform services may communicate with a
-device. Google Play Billing may communicate with Google Play when a purchase,
-catalog, or ownership operation is available and exercised. Those platform
-operations are separate from Focus Tap transmitting local gameplay data to its
-own server.
+The Google Play Billing Library also automatically sends diagnostic events to
+Google through Google's transport service when those events occur. They can
+include billing API operation and result/error information, app/package and
+library versions, Android version/build and device model, locale, time zone,
+network type, and mobile operator codes. Google receives this information for
+diagnostics and service reliability. Focus Tap does not offer a control to
+disable these SDK diagnostic transmissions.
+
+For billing operations, the library uses a random `billingClientSessionId`
+correlation value generated for a BillingClient instance and reused across
+operations handled by that instance. The value is sent with purchase
+acknowledgement data to correlate the operation. Focus Tap does not save it in
+its local save or associate it with the local player identifier or display
+name.
 
 There is no active Focus Tap production Firebase Auth/Firestore service,
 online leaderboard submission, analytics provider, advertising provider, or
-crash-reporting provider in the current V1 release.
+crash-reporting provider in this release.
 
 ## 4. Google Play Billing and Full Game Unlock
 
-The Android package includes a Google Play Billing bridge for the planned
-one-time, non-consumable `full_game_unlock` product. Scene 1 is free; Scenes
-2–11 are intended to require the Full Game Unlock. Seasonal Event
-participation is intended to be free for all players.
+Focus Tap offers the one-time, non-consumable `full_game_unlock` product.
+Google Play processes the payment and related purchase records under its own
+services and policies. Payment-card, bank-account, and other payment-instrument
+details are handled by Google Play; Focus Tap does not receive those details.
 
-Google Play processes purchase, product metadata, ownership, and payment
-records under its own services and policies. The local save stores entitlement
-metadata reported by the bridge. Raw purchase tokens are not persisted by
-Focus Tap's save layer.
+When a purchase is made, the Billing Library provides Focus Tap with purchase
+information needed to grant and acknowledge the product, including the product
+identifier, purchase state, and purchase token. Focus Tap uses the token to
+acknowledge the purchase through Google Play. The raw token is held transiently
+for that operation and is not persisted in Focus Tap's local save. The local
+save stores entitlement metadata only. Google Play ownership checks also run
+automatically at startup and after a Billing service reconnection, as described
+in Section 3.
 
-Play Console product and test-track verification, real purchase,
-acknowledgement, restore/re-query, pending/cancel/error, refund, reinstall
-recovery, and any trusted server-side verification are separate release
-steps. Focus Tap does not claim to delete Google Play transaction records.
+Focus Tap does not send purchase tokens to a Focus Tap server and does not
+claim to delete Google Play purchase or diagnostic records. Google Play's
+retention and deletion practices are governed by Google's own services and
+policies; Focus Tap does not control their retention period.
 
 ## 5. Permissions and platform services
 
-The app uses Internet access for provider-ready services, vibration for haptic
-feedback, Google Play Billing for the Full Game Unlock, and network-state
-availability checks for the Billing integration.
-
-Focus Tap does not request contacts, location, camera, microphone, storage,
-phone, SMS, Bluetooth, notification, or advertising-ID permissions in the
-current release.
+The published Android app uses Internet access and network-state information
+for Google Play Billing and its automatic catalog and ownership checks. It
+does not request contacts, location, camera, microphone, storage, phone, SMS,
+Bluetooth, notification, or advertising-ID permissions in this release.
 
 ## 6. Retention and deletion
 
-The local save is stored in app-private device storage.
+The local save is stored in app-private device storage. When the app is closed
+or backgrounded, saved values remain and are loaded on the next launch. An
+in-place update normally preserves app-private data. Clearing Android app data
+removes the local save; uninstalling normally removes the app's local data. A
+later launch or reinstall starts with fresh local state. The local save is not
+a Focus Tap cloud backup.
 
-- When the app is closed or backgrounded, saved values remain and are loaded on
-  the next launch. Closing does not intentionally delete data.
-- When the app is updated in place, Focus Tap does not reset the save. Android
-  normally preserves app-private data for an update of the same package and
-  signing identity.
-- Uninstalling the app normally removes its app-private local save. Focus Tap
-  has no server-side deletion callback in V1.
-- Clearing Android app data removes the local save. The next launch creates a
-  new anonymous local identity and default state.
-- Reinstalling after local data removal starts as a fresh local installation.
-  Local save data is not a cloud backup. Any entitlement recovery depends on
-  Google Play ownership re-query after the Billing path is configured and
-  verified.
-
-Focus Tap currently provides no online account-deletion workflow because V1
-does not create player accounts or cloud saves. Android app-data and uninstall
-controls remove local Focus Tap data. They do not delete Google Play records or
-platform-level data.
+Focus Tap has no online player accounts, Focus Tap cloud saves, or app-level
+account-deletion workflow in this release. Android app-data and uninstall
+controls remove local Focus Tap data. They do not delete records or diagnostics
+held by Google Play. Focus Tap does not control Google's retention period or
+promise deletion of Google's records. The privacy contact is for questions; it
+does not provide a deletion-request service for Google Play records or
+diagnostics.
 
 ## 7. Children's privacy and audience
 
 Focus Tap launches as a general-audience game and is not specifically directed
-to children. It is not opting into a child-directed/Families posture in V1.
+to children. It is not opting into a child-directed/Families posture in this
+release.
 
 ## 8. Security and policy changes
 
-Onnique Studios uses reasonable safeguards appropriate to the app and services
-actually enabled. No device, operating system, or third-party platform can be
-promised to be risk-free.
+Google Play Billing operations and Billing Library diagnostics use encrypted
+network transport. CCMF Interactive uses reasonable safeguards
+appropriate to the app and services actually enabled. No device, operating
+system, or third-party platform can be promised to be risk-free.
 
 If Firebase, online accounts, online leaderboards, analytics, ads, or other
 providers are enabled later, this policy will be reviewed and updated before
-that release.
-
-Onnique Studios may update this policy when the app, services, or legal
-requirements change. The effective date above will be updated when this policy
-is published or revised.
+that release. CCMF Interactive may update this policy when the app, services,
+or legal requirements change. The effective date above will be updated when
+this policy is published or revised.
 
 ## 9. Contact
 
-For privacy or support questions, contact:
+For privacy questions, contact CCMF Interactive at:
 
-**aethrion.collective@outlook.com**
+**[ccmfllc1926@gmail.com](mailto:ccmfllc1926@gmail.com)**
