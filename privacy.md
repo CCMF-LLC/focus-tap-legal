@@ -1,125 +1,63 @@
 # Focus Tap Privacy Policy
 
-**Public developer/publisher brand:** CCMF Interactive  
-**Privacy and customer-support contact:** [ccmfllc1926@gmail.com](mailto:ccmfllc1926@gmail.com)  
-**Effective date:** November 4, 2026
+**Public-facing publisher/operator:** CCMF Interactive (an unregistered public-facing name)
 
-## 1. Scope
+**Privacy and support contact:** [ccmfllc1926@gmail.com](mailto:ccmfllc1926@gmail.com)
 
-This Privacy Policy describes the Focus Tap Android game and the data
-practices enabled in the published Billing-only version. Focus Tap does not
-require a player account and is not specifically directed to children. The
-approved audience is general audience.
+**Last revised:** November 7, 2026
 
-## 2. Information Focus Tap stores on the device
+**Scope:** Focus Tap Beta 0.2.0, Android package `com.aethrion.focustap`.
 
-Focus Tap stores a local save file in app-private device storage. Depending on
-how the player uses the app, it can contain a locally generated anonymous
-player identifier and player-selected display name; scores, run summaries,
-accuracy and combo records, Campaign and Daily progress, stars, achievements,
-mastery and progression, Collection state, earned local rewards; settings and
-local preferences; an analytics-consent choice; and local Full Game entitlement
-metadata. This save supports gameplay, progression, profile presentation,
-local leaderboard-style views, preferences, and entitlement state. It is not an
-online account or a Focus Tap cloud profile. Focus Tap does not send this local
-save or its gameplay/profile fields to a Focus Tap server.
+## Scope
 
-## 3. What Focus Tap transmits
+This policy covers Focus Tap, Android package `com.aethrion.focustap`. The game does not require a Focus Tap account. It provides local gameplay across 12 worlds, Daily and Rush modes, seasonal adventures and a personal Event Vault. Worlds 1–2 are free; Full Game Unlock opens Worlds 3–12 and eligible event Stages 2–3 after prior-stage completion. Active event Stage 1, previews and personal Vault history are free. These access rules do not mean that premium purchase or advertising SDKs are absent from the app.
 
-The published Billing-only version can communicate with Google Play through
-Google Play Billing. The Billing Library connects and checks the product
-catalog and existing purchase ownership automatically after the app starts and
-after a Billing service reconnection, when the service and network are
-available. These checks can happen without the player opening the purchase
-screen or starting a new purchase. Focus Tap does not transmit its local player
-identifier, display name, gameplay/progression data, Collection data, settings,
-consent choice, or local entitlement metadata to a Focus Tap server.
+## Data stored on your device
 
-The Google Play Billing Library also automatically sends diagnostic events to
-Google through Google's transport service when those events occur. They can
-include billing API operation and result/error information, app/package and
-library versions, Android version/build and device model, locale, time zone,
-network type, and mobile operator codes. Google receives this information for
-diagnostics and service reliability. Focus Tap does not offer a control to
-disable these SDK diagnostic transmissions.
+The app stores a save in its private device storage: a randomly generated local player ID; your selected name/avatar; gameplay, worlds, scores, stars, collections, event stages/history, achievements and rewards; coins, helpers and lives; purchase entitlements and a purchase-reward ledger; and preferences such as music, sound, vibration, reduced motion and reminders. A local analytics preference may also be stored.
 
-For billing operations, the library uses a random `billingClientSessionId`
-correlation value generated for a BillingClient instance and reused across
-operations handled by that instance. The value is sent with purchase
-acknowledgement data to correlate the operation. Focus Tap does not save it in
-its local save or associate it with the local player identifier or display
-name.
+For purchase duplicate protection, the ledger stores a shortened SHA-256-derived purchase-token key. Raw purchase tokens are handled temporarily for purchase processing, acknowledgement and consumption, rather than saved in the gameplay save. A derived token key is still purchase-related data; it is not a promise of anonymity.
 
-There is no active Focus Tap production Firebase Auth/Firestore service,
-online leaderboard submission, analytics provider, advertising provider, or
-crash-reporting provider in this release.
+This version does not send the local save to a Focus Tap server, create a Focus Tap cloud account, submit online leaderboard scores, or enable a separate Focus Tap analytics or crash-reporting provider. This statement does not cover the Google SDK communications described below. An in-app analytics preference does not disable those separate SDK communications.
 
-## 4. Google Play Billing and Full Game Unlock
+## Google Play Billing
 
-Focus Tap offers the one-time, non-consumable `full_game_unlock` product.
-Google Play processes the payment and related purchase records under its own
-services and policies. Payment-card, bank-account, and other payment-instrument
-details are handled by Google Play; Focus Tap does not receive those details.
+The app includes Google Play Billing Library 9.1.0. It connects to Google Play and checks available products and ownership at startup and when its billing connection is established again. You do not have to open the Shop for these checks to occur.
 
-When a purchase is made, the Billing Library provides Focus Tap with purchase
-information needed to grant and acknowledge the product, including the product
-identifier, purchase state, and purchase token. Focus Tap uses the token to
-acknowledge the purchase through Google Play. The raw token is held transiently
-for that operation and is not persisted in Focus Tap's local save. The local
-save stores entitlement metadata only. Google Play ownership checks also run
-automatically at startup and after a Billing service reconnection, as described
-in Section 3.
+Products include Full Game Unlock, Starter Bundle, four coin packs and the Magic Objects Avatar Pack. Google Play processes payments under its own terms and policies. The app receives product, purchase-state and purchase-token information needed to grant rewards, acknowledge purchases, consume repeatable coin-pack purchases and restore eligible ownership. The app does not receive your card or bank-account details or send purchase tokens to a Focus Tap backend.
 
-Focus Tap does not send purchase tokens to a Focus Tap server and does not
-claim to delete Google Play purchase or diagnostic records. Google Play's
-retention and deletion practices are governed by Google's own services and
-policies; Focus Tap does not control their retention period.
+Billing SDK code also supports operational diagnostic reporting to Google through Google's data transport service. Technical information relating to the app, device, billing operations and errors may be processed for service operation, reliability and fraud prevention. This app has no separate switch for Billing SDK diagnostics. Google controls its own purchase and diagnostic retention.
 
-## 5. Permissions and platform services
+## Google consent and advertising SDKs
 
-The published Android app uses Internet access and network-state information
-for Google Play Billing and its automatic catalog and ownership checks. It
-does not request contacts, location, camera, microphone, storage, phone, SMS,
-Bluetooth, notification, or advertising-ID permissions in this release.
+This version includes Google Mobile Ads SDK 25.5.0 and User Messaging Platform (UMP) 4.0.0. Its ordinary release gameplay disables both rewarded and interstitial ad requests; purchasing Full Game is not required to avoid forced gameplay ads in this build. This does not disable SDK startup communication.
 
-## 6. Retention and deletion
+At startup the app asks UMP to update consent information. UMP's network request can include app/package and SDK versions, device model/Android version, language, screen information and stored consent-related values. Google also receives the connection's IP address. UMP may show a privacy message when required. The app can initialize Mobile Ads when UMP says ads may be requested, even though this build's gameplay ad requests remain disabled.
 
-The local save is stored in app-private device storage. When the app is closed
-or backgrounded, saved values remain and are loaded on the next launch. An
-in-place update normally preserves app-private data. Clearing Android app data
-removes the local save; uninstalling normally removes the app's local data. A
-later launch or reinstall starts with fresh local state. The local save is not
-a Focus Tap cloud backup.
+Google's Mobile Ads disclosure describes automatic processing of IP address, app interactions, diagnostic information and device/account identifiers, including advertising ID and app-set ID, for advertising, analytics and fraud prevention. IP address can support approximate location. The exact values and processing depend on SDK execution, consent, device settings and availability; a manifest permission alone does not establish that a particular identifier was sent. Google is a third-party recipient of SDK data and its use is governed by its policies. This app does not supply the local player name or save as advertising targeting data.
 
-Focus Tap has no online player accounts, Focus Tap cloud saves, or app-level
-account-deletion workflow in this release. Android app-data and uninstall
-controls remove local Focus Tap data. They do not delete records or diagnostics
-held by Google Play. Focus Tap does not control Google's retention period or
-promise deletion of Google's records. The privacy contact is for questions; it
-does not provide a deletion-request service for Google Play records or
-diagnostics.
+When Google requires a privacy-options entry point, use **Settings → Privacy choices** to review available choices. Resetting or deleting the advertising ID in Android settings affects that identifier, not every SDK communication. Offline play remains available; network-dependent services may be unavailable. Google's disclosures: [Mobile Ads data handling](https://developers.google.com/admob/android/privacy/play-data-disclosure), [Google Privacy Policy](https://policies.google.com/privacy).
 
-## 7. Children's privacy and audience
+## Optional reminders and sharing
 
-Focus Tap launches as a general-audience game and is not specifically directed
-to children. It is not opting into a child-directed/Families posture in this
-release.
+Reminders are scheduled locally using Android alarms and notifications for the daily gift, full lives and streak. On Android 13 or later, displaying notifications requires your permission. Turn reminders off in Settings or use Android notification controls. Reminder scheduling does not upload your save to a Focus Tap server.
 
-## 8. Security and policy changes
+When you choose Share, the app creates a result image locally, copies it to its private cache and opens Android's share sheet. It grants the app you select access to the shared image/text. Focus Tap does not automatically post it. The receiving app handles anything you choose to send under its own policies.
 
-Google Play Billing operations and Billing Library diagnostics use encrypted
-network transport. CCMF Interactive uses reasonable safeguards
-appropriate to the app and services actually enabled. No device, operating
-system, or third-party platform can be promised to be risk-free.
+## Permissions and platform components
 
-If Firebase, online accounts, online leaderboards, analytics, ads, or other
-providers are enabled later, this policy will be reviewed and updated before
-that release. CCMF Interactive may update this policy when the app, services,
-or legal requirements change. The effective date above will be updated when
-this policy is published or revised.
+Internet/network access supports Google services. Billing permission supports purchases; vibration supports optional tap feedback; notification permission supports reminders. The merged SDK manifest also includes advertising ID, Android AdServices ID/attribution/topics, wake-lock and foreground-service permissions. These allow platform/SDK functions and do not establish that every capability is exercised. The app does not declare camera, microphone, contacts, phone/SMS, precise/coarse device-location, or broad storage/media-reading permissions. IP-derived approximate location is distinct from device-location permission.
 
-## 9. Contact
+## Retention and deletion
 
-For privacy questions, contact CCMF Interactive at:
+The save remains on the device between sessions. Clearing Android app data removes local progress and rewards; uninstalling normally removes app-private data. Updates normally preserve local data. There is no Focus Tap cloud backup. Consumed coins, spent helpers, local rewards and local progress are not promised to return after data loss; eligible non-consumable ownership can be re-queried from Google Play.
 
-**[ccmfllc1926@gmail.com](mailto:ccmfllc1926@gmail.com)**
+Google keeps its own purchase, SDK and consent records under its policies. Clearing Focus Tap data does not delete those records. We do not promise a specific Google retention period or a deletion service for Google's records. Contact **ccmfllc1926@gmail.com** with questions about our handling; use Google's controls and policies for Google-held information.
+
+## Security and audience
+
+Google SDK services use encrypted network transport. Local app-private storage and platform safeguards reduce risk but do not guarantee security. Focus Tap is intended for a general audience and is not specifically directed to children. It is not represented as enrolled in Google's Families program. Any future change to the audience, providers or data handling requires review of this policy.
+
+## Contact and changes
+
+This policy is provided under the public-facing publisher/operator name **CCMF Interactive**. The name is currently unregistered; no incorporated or registered-entity status is claimed. Privacy and support questions: **ccmfllc1926@gmail.com**. We will update this policy and its effective date when practices change.
