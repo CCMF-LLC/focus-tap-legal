@@ -1,97 +1,61 @@
 # Focus Tap Terms of Service
 
-**Public brand:** Onnique Studios
-**Operator:** Onnique Studios, operated by a sole proprietor in Jamaica
-**Governing law:** Jamaica, subject to applicable mandatory consumer rights
-**Contact:** aethrion.collective@outlook.com
-**Effective date:** September 26, 2026
+**Public-facing publisher/operator:** CCMF Interactive (an unregistered public-facing name)
 
-## 1. Accepting these Terms
+**Privacy and support contact:** [ccmfllc1926@gmail.com](mailto:ccmfllc1926@gmail.com)
 
-These Terms govern use of Focus Tap, a mobile game published under the
-Onnique Studios brand. By installing or using Focus Tap, you agree to use it
-lawfully and respectfully. If you do not agree, do not use the app. Nothing in
-these Terms removes a right that applicable law does not allow to be removed.
+**Last revised:** November 7, 2026
 
-## 2. License and intellectual property
+**Scope:** Focus Tap Beta 0.2.0, Android package `com.aethrion.focustap`.
 
-Subject to these Terms and applicable app-store rules, Onnique Studios grants
-a personal, limited, non-exclusive, non-transferable license to install and
-use Focus Tap for personal entertainment on a supported device. Focus Tap,
-its software, artwork, audio, text, branding, layouts, and other materials are
-owned by or licensed to Onnique Studios and are protected by applicable
-intellectual-property laws. No ownership is transferred to the player.
+## Using Focus Tap
 
-You must not copy, sell, lease, sublicense, reverse engineer where prohibited
-by law, bypass access controls, exploit defects, use automation to interfere
-with play, or misuse the app or its services.
+These Terms apply to Focus Tap, Android package `com.aethrion.focustap`, provided under the public-facing publisher/operator name **CCMF Interactive**. Use the game lawfully and respect others' rights. Nothing here removes rights that applicable law does not permit us to exclude.
 
-## 3. Local play and progression
+Subject to applicable law and store rules, we grant a personal, limited, non-exclusive, non-transferable permission to use the game for entertainment. The game and its artwork, music, sounds, text and code are owned by or licensed to their respective rights holders. You receive no ownership of those assets. Do not unlawfully copy/distribute them, circumvent purchase controls, or exploit defects to obtain paid content. Restrictions on reverse engineering apply only to the extent permitted by law.
 
-V1 does not require a player account. Focus Tap stores local gameplay,
-progression, Collection, settings, and profile values on the device. Local
-progress may be lost if app data is cleared or the app is uninstalled. Android
-updates normally preserve app data, but Onnique Studios cannot promise that a
-device, operating-system restore, or future update will preserve every local
-value.
+## Free content and Full Game Unlock
 
-## 4. Free and premium Campaign content
+Focus Tap is free to download. Worlds 1–2 are free. Full Game Unlock opens Worlds 3–12, unlimited lives, free +5 seconds after a loss, and eligible Stages 2–3 of seasonal adventures after completion of the preceding stages. The unlock grants 200 bonus coins on its first recorded grant. Existing and restored Full Game owners receive the same premium event access; there is no separate event pass.
 
-Focus Tap is intended to be a free download with meaningful free content.
-Campaign Scene 1 is free. Scenes 2–11 are intended to require the optional
-Full Game Unlock. Seasonal Event participation is intended to be free for all
-players. Content, schedules, availability, and rewards may change; no seasonal
-event or online service is promised to remain available forever.
+Active seasonal Stage 1, previews and your personal Event Vault history are free. Premium access does not bypass event dates, stage prerequisites or replay restrictions, and Vault history does not guarantee replay of expired adventures. Content and event calendars may change, subject to applicable consumer rights.
 
-## 5. Full Game Unlock and Google Play Billing
+## Other in-app products
 
-The Full Game Unlock is intended to be a one-time, non-consumable digital
-purchase, not a subscription. Google Play processes payment, purchase records,
-refunds, and applicable store controls. Prices, taxes, availability, payment
-methods, refunds, and purchase support are subject to Google Play and
-applicable law.
+Purchases are one-time Google Play in-app products, not subscriptions:
 
-The Android package contains a Billing bridge, but Play Console product setup
-and real test-track purchase verification remain release steps. Purchase
-acknowledgement, pending/cancelled/error outcomes, restore/re-query,
-reinstall recovery, and any server-side verification must be tested before the
-purchase is advertised as operational. A Google Play ownership record is
-separate from the local save; clearing app data does not erase Google Play
-records, and Focus Tap does not control Google's transaction data.
+| Product | Contents |
+| --- | --- |
+| Starter Bundle (`starter_bundle`) | 600 coins, two of each helper (Slow Time, Freeze, +5 seconds), and Gold Frame |
+| Coin packs (`coins_300`, `coins_700`, `coins_2000`, `coins_4500`) | The named quantity of coins; repeatable consumable purchases |
+| Magic Objects Avatar Pack (`avatar_pack_magic`) | Compass, lantern, moon charm and lucky clover avatars |
 
-Nothing in these Terms limits mandatory refund, withdrawal, consumer, or other
-rights that apply under law or Google Play policy.
+Full Game Unlock (`full_game_unlock`), Starter Bundle and the avatar pack are non-consumable products. Prices and purchase availability are shown through Google Play for your region. Purchase products only through the store purchase flow.
 
-## 6. Availability, updates, and changes
+Coins and helpers are digital game items, have no cash-redemption value and cannot be transferred between players through this app. The app records grants locally and uses a derived purchase-token ledger to reduce duplicate grants before acknowledging or consuming purchases. This is not a cloud backup or an assurance that local consumables survive loss of app data.
 
-Focus Tap may be updated, suspended, changed, or discontinued in whole or in
-part for maintenance, security, technical, product, or legal reasons. The app
-may depend on Android, Google Play, or other platform services. Onnique Studios
-does not promise uninterrupted availability, compatibility with every device,
-or permanent availability of any event, feature, or service.
+## Payments, restore and refunds
 
-These Terms may be updated as the product or legal requirements change. The
-effective date above will be updated when these Terms are published or
-revised. Continued use after an update means the updated Terms apply to the
-extent permitted by law.
+Google Play handles payment methods, transaction records and its refund processes. Focus Tap does not receive your card or bank-account details. Pending purchases must complete before paid benefits are granted. Eligible non-consumable ownership can be checked using Restore purchase in Settings or the Shop. Google ownership checks may revoke an unlock when Google no longer reports it owned.
 
-## 7. Disclaimers and responsibility
+Consumed coin packs, spent currency/helpers, local progression and other local grants are not promised to be restored after app-data deletion, uninstall or device change. If a purchased item is missing, contact **ccmfllc1926@gmail.com** and use Google's purchase-support/refund controls as applicable. Nothing in these Terms overrides mandatory refund, withdrawal or consumer rights.
 
-Focus Tap is provided on an availability basis to the extent permitted by
-applicable law. Onnique Studios will not disclaim or limit a responsibility
-that cannot lawfully be disclaimed or limited. Players remain responsible for
-using the app safely and complying with applicable laws and platform rules.
+## Ads and Google SDKs
 
-## 8. Governing law
+The ordinary 0.2.0 release does not request rewarded or interstitial gameplay ads. It includes Google consent and advertising SDKs, and consent-status updates and permitted SDK initialization can still occur at startup. Future ad activation is not promised as part of this purchase or build. Our Privacy Policy explains SDK processing and available privacy choices. Full Game ownership is not a promise to prevent all billing, consent or SDK communication.
 
-These Terms are governed by the laws of Jamaica, subject to applicable
-mandatory consumer protections and other rights that cannot lawfully be
-excluded. Any required dispute process or forum must also respect those
-mandatory rights.
+## Reminders, sharing and local data
 
-## 9. Contact
+Reminders are optional local notifications and can be disabled. Sharing is optional through Android's share sheet; you choose whether and where to send a result image. The app does not automatically publish results.
 
-Questions, support requests, and purchase-related support questions may be
-sent to:
+The game does not require a Focus Tap account or provide a Focus Tap cloud save in this version. Local saves normally survive updates but may be lost if app data is cleared, the app is removed, or the device fails. Google Play purchase ownership is separate from the local save. Consult the Privacy Policy for data and SDK details.
 
-**aethrion.collective@outlook.com**
+## Availability and responsibility
+
+The app depends on Android and, for purchases and consent services, Google's services. We do not guarantee uninterrupted service, permanent event availability, or compatibility with every device. Changes, suspension or discontinuation remain subject to applicable law and consumer rights. Use the game safely. No disclaimer in these Terms limits liability or a remedy that cannot legally be excluded.
+
+## Changes, law and contact
+
+These Terms may be revised when the game or applicable requirements change, with an updated effective date and notice where required. These Terms are governed by the laws of Jamaica, subject to any mandatory consumer protections that apply to you.
+
+Public-facing publisher/operator: **CCMF Interactive**, currently an unregistered name. No incorporated or registered-entity status is claimed. Questions and purchase support: **ccmfllc1926@gmail.com**.
